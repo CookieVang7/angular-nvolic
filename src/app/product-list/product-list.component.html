@@ -6,6 +6,12 @@
       {{ product.name }}
     </a>
   </h3>
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+  <button (click)="share()">
+    Share
+  </button>
 </div>
 
 <!-- 
@@ -22,4 +28,6 @@ can be found in the LICENSE file at http://angular.io/license
   -Cookie's comments for learning purposes
   -{{}} is syntax for text
   -adding an <a> [title] makes the title's name a link to another page 
+  -On the <p> element, use an *ngIf directive so that Angular only creates the <p> element if the current product has a description
+  -Bind the button's click event to the share() method (in product-list.component.ts). Event binding uses a set of parentheses, ( ), around the event, as in the following <button> element
   -->
