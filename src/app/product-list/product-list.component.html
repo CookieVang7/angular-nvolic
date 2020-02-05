@@ -1,8 +1,25 @@
 <h2>Products</h2>
 
+<div *ngFor="let product of products">
+  <h3>
+      <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 -->
+
+<!--
+  ngFor is a "structural directive". Structural directives shape or reshape the DOM's structure, typically by adding, removing, and manipulating the elements to which they are attached. Any directive with an asterisk, *, is a structural directive.
+  -->
+
+<!--
+  -Cookie's comments for learning purposes
+  -{{}} is syntax for text
+  -adding an <a> [title] makes the title's name a link to another page 
+  -->
